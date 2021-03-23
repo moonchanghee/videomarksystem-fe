@@ -2,6 +2,7 @@
   "name": "videomarksystem_fe",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3002",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -9,10 +10,12 @@
     "antd": "^4.14.0",
     "axios": "^0.21.1",
     "cors": "^2.8.5",
+    "proxy": "^1.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-dropzone": "^11.3.1",
     "react-scripts": "4.0.3",
+    "video.js": "^7.11.4",
     "videojs": "^1.0.0",
     "videojs-markers": "^1.0.1",
     "web-vitals": "^1.0.1"

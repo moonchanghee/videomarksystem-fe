@@ -1,10 +1,11 @@
 import React,{useEffect , useState,useRef } from 'react'
 import VideoDetailPresenter from './VideoDetailPresenter'
 import Axios from 'axios';
+import 'videojs-markers'
 const VideoDetailContainer = () => {
     // {"_id":{"$oid":"60596d88b86a9b76dc1d266c"}
-    const [marker, setMarkers] = useState([{}])
     const [video,setVideo] = useState("")
+    const [markers , setmarkers] = useState([{time : 12, text: "gdgdg" , val : "hi"}])
     useEffect(() => {
         Axios.post('/uploadVideo/getVideoDetail' , {videoId: "60596d88b86a9b76dc1d266c"})
         .then(res => {
@@ -18,18 +19,14 @@ const VideoDetailContainer = () => {
             }
         })
         // Axios.get('/marker').then(e => {setMarkers( marker => [...marker, e.data.markers])})
-        // Axios.get('/marker').then(e => {setMarkers(e.data.markers)})
+        Axios.get('/marker').then(e => {setmarkers(markers.concat(e.data.markers))})
         // Axios.get('/marker').then(e => {console.log(e.data.markers)})
         // Axios.get('/marker').then(e => {console.log(text : e.data.markers)})
-        
     }, [])
-
-
-
     
     return (
         <VideoDetailPresenter Video={video} 
-        marker ={marker}
+        markers = { markers}
         >
         </VideoDetailPresenter>
     );

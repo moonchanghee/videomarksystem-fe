@@ -4,6 +4,8 @@
   "private": true,
   "proxy": "http://localhost:3002",
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^27.1.0",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -16,6 +18,7 @@
     "react-dom": "^17.0.1",
     "react-dropzone": "^11.3.1",
     "react-scripts": "4.0.3",
+    "react-speech-recognition": "^3.8.0",
     "video.js": "^7.11.4",
     "videojs": "^1.0.0",
     "videojs-markers": "^1.0.1",
